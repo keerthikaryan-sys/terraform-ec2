@@ -13,11 +13,13 @@ pipeline {
     }
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/your-repo/terraform-ec2.git'
-            }
-        }
+       stage('Checkout Code') {
+    steps {
+        git branch: 'main',
+            url: 'https://github.com/keerthikaryan-sys/terraform-ec2.git',
+            credentialsId: 'github-pat-id'
+    }
+}
 
         stage('Terraform Init') {
             steps {
