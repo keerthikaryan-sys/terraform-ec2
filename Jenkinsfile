@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'AMI_ID', defaultValue: 'ami-0c55b159cbfafe1f0', description: 'AMI ID for the instance')
+        string(name: 'AMI_ID', defaultValue: 'ami-0323c3dd2da7fb37d', description: 'AMI ID for the instance')
         string(name: 'INSTANCE_TYPE', defaultValue: 't2.micro', description: 'EC2 instance type')
     }
 
